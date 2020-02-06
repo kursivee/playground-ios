@@ -7,7 +7,8 @@
 //
 
 import Foundation
+import PromiseKit
 
 protocol GreetingRepository {
-    func getGreeting() -> GreetingEntity
+    func getGreeting() -> Promise<GreetingEntity>
 }

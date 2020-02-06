@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import PromiseKit
 
 struct GetGreetingUseCase {
     private var repository: GreetingRepository
@@ -15,7 +16,9 @@ struct GetGreetingUseCase {
         self.repository = repository
     }
     
-    func execute() -> GreetingModel {
-        return GreetingModel(greeting: repository.getGreeting().greeting ?? "Error")
+    func execute() -> Promise<GreetingModel> {
+        return repository.getGreeting().map { body in
+            GreetingModel(greeting: body.greeting ?? "ERROR")
+        }
     }
 }

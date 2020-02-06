@@ -10,12 +10,15 @@ import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject var injector: Injector
+    @State var message: String = "CLICK THE BUTTON"
     
     var body: some View {
         VStack(alignment: .leading) {
-            Text(injector.s)
+            Text(message)
             Button(action: {
-                print(self.injector.getGreetingUseCase.execute())
+                self.injector.getGreetingUseCase.execute().done { res in
+                    self.message = res.greeting
+                }
             }) {
                 Text("Hello World")
             }
