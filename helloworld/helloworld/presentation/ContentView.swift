@@ -9,25 +9,23 @@
 import SwiftUI
 
 struct ContentView: View {
-    @EnvironmentObject var injector: Injector
     @State var message: String = "CLICK THE BUTTON"
+    private var controller: ContentViewController
+    
+    init(controller: ContentViewController) {
+        self.controller = controller
+    }
     
     var body: some View {
         VStack(alignment: .leading) {
             Text(message)
             Button(action: {
-                self.injector.getGreetingUseCase.execute().done { res in
-                    self.message = res.greeting
+                self.controller.getGreeting().done { res in
+                    self.message = res
                 }
             }) {
                 Text("Hello World")
             }
         }
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
     }
 }

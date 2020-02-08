@@ -25,6 +25,7 @@
 		4EF0F79C23EC3D480056F2D9 /* GreetingApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF0F79B23EC3D480056F2D9 /* GreetingApi.swift */; };
 		4EF0F79F23EC3ED40056F2D9 /* NetworkRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF0F79E23EC3ED40056F2D9 /* NetworkRequester.swift */; };
 		4EF0F7A123EC3FE70056F2D9 /* GreetingRepositoryRemote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF0F7A023EC3FE70056F2D9 /* GreetingRepositoryRemote.swift */; };
+		4EF0F7A523EF00100056F2D9 /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF0F7A423EF00100056F2D9 /* ContentViewController.swift */; };
 		F0381046BAA7D4DF3799B444 /* Pods_helloworld.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 214D70EBB8CA8052BBC10D05 /* Pods_helloworld.framework */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +73,7 @@
 		4EF0F79B23EC3D480056F2D9 /* GreetingApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingApi.swift; sourceTree = "<group>"; };
 		4EF0F79E23EC3ED40056F2D9 /* NetworkRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequester.swift; sourceTree = "<group>"; };
 		4EF0F7A023EC3FE70056F2D9 /* GreetingRepositoryRemote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingRepositoryRemote.swift; sourceTree = "<group>"; };
+		4EF0F7A423EF00100056F2D9 /* ContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
 		6C9A5AEF2E0CE40B901F8D56 /* Pods-helloworld.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-helloworld.debug.xcconfig"; path = "Target Support Files/Pods-helloworld/Pods-helloworld.debug.xcconfig"; sourceTree = "<group>"; };
 		991B8CC78D255663D2DEAB72 /* Pods_helloworldTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_helloworldTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD9B79255CD8BC6C5EE7517A /* Pods-helloworldTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-helloworldTests.release.xcconfig"; path = "Target Support Files/Pods-helloworldTests/Pods-helloworldTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -132,13 +134,12 @@
 		4EF0F75523EB8CDE0056F2D9 /* helloworld */ = {
 			isa = PBXGroup;
 			children = (
+				4EF0F7A323EEFFAB0056F2D9 /* presentation */,
 				4EF0F79D23EC3E8F0056F2D9 /* network */,
 				4EF0F78C23EC34EB0056F2D9 /* domain */,
 				4EF0F78B23EC34DB0056F2D9 /* data */,
 				4EF0F78823EBA5360056F2D9 /* di */,
 				4EF0F75623EB8CDE0056F2D9 /* AppDelegate.swift */,
-				4EF0F75823EB8CDE0056F2D9 /* SceneDelegate.swift */,
-				4EF0F75A23EB8CDE0056F2D9 /* ContentView.swift */,
 				4EF0F75C23EB8CE10056F2D9 /* Assets.xcassets */,
 				4EF0F76123EB8CE10056F2D9 /* LaunchScreen.storyboard */,
 				4EF0F76423EB8CE10056F2D9 /* Info.plist */,
@@ -207,6 +208,16 @@
 				4EF0F79E23EC3ED40056F2D9 /* NetworkRequester.swift */,
 			);
 			path = network;
+			sourceTree = "<group>";
+		};
+		4EF0F7A323EEFFAB0056F2D9 /* presentation */ = {
+			isa = PBXGroup;
+			children = (
+				4EF0F75823EB8CDE0056F2D9 /* SceneDelegate.swift */,
+				4EF0F75A23EB8CDE0056F2D9 /* ContentView.swift */,
+				4EF0F7A423EF00100056F2D9 /* ContentViewController.swift */,
+			);
+			path = presentation;
 			sourceTree = "<group>";
 		};
 		5FC934024040710D8689F2F3 /* Pods */ = {
@@ -475,6 +486,7 @@
 				4EF0F75723EB8CDE0056F2D9 /* AppDelegate.swift in Sources */,
 				4EF0F7A123EC3FE70056F2D9 /* GreetingRepositoryRemote.swift in Sources */,
 				4EF0F79C23EC3D480056F2D9 /* GreetingApi.swift in Sources */,
+				4EF0F7A523EF00100056F2D9 /* ContentViewController.swift in Sources */,
 				4EF0F79223EC35B80056F2D9 /* GreetingEntity.swift in Sources */,
 				4EF0F75923EB8CDE0056F2D9 /* SceneDelegate.swift in Sources */,
 				4EF0F79023EC35A50056F2D9 /* GreetingRepository.swift in Sources */,

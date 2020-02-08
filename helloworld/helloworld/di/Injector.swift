@@ -9,13 +9,15 @@
 import Foundation
 
 // I'm not sure how to do DI yet on swift so just messing around with this
-class Injector: ObservableObject {
+struct Injector {
     private var api: GreetingApi
     var getGreetingUseCase: GetGreetingUseCase
     var requester: NetworkRequester = NetworkRequester(baseUrl: "http://www.mocky.io/v2/")
+    var contentViewController: ContentViewController
     
     init() {
         api = GreetingApi(requester: self.requester)
         getGreetingUseCase = GetGreetingUseCase(repository: GreetingRepositoryRemote(api: self.api))
+        contentViewController = ContentViewController(getGreetingUseCase: self.getGreetingUseCase)
     }
 }
